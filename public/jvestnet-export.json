@@ -1,0 +1,95 @@
+{
+  "10204337446895517" : {
+    "balance" : {
+      "asOfDate" : "2014-11-21",
+      "balanceAmount" : 5638.18
+    },
+    "bills" : {
+      "monthlyBills" : {
+        "2" : {
+          "amount" : -310,
+          "day" : 10,
+          "desc" : "Visa"
+        },
+        "3" : {
+          "amount" : -4000,
+          "day" : 10,
+          "desc" : "Chase Visa"
+        },
+        "4" : {
+          "amount" : -300,
+          "day" : 12,
+          "desc" : "Amex"
+        },
+        "5" : {
+          "amount" : -270,
+          "day" : 14,
+          "desc" : "Geico"
+        },
+        "6" : {
+          "amount" : 3211.17,
+          "day" : 15,
+          "desc" : "Paycheck"
+        },
+        "7" : {
+          "amount" : -180,
+          "day" : 17,
+          "desc" : "Withlacoochee"
+        },
+        "8" : {
+          "amount" : -200,
+          "day" : 17,
+          "desc" : "Christine Car"
+        },
+        "9" : {
+          "amount" : -100,
+          "day" : 20,
+          "desc" : "Care Credit"
+        },
+        "10" : {
+          "amount" : -150,
+          "day" : 21,
+          "desc" : "Verizon Fios"
+        },
+        "11" : {
+          "amount" : -205,
+          "day" : 25,
+          "desc" : "Student Loan"
+        },
+        "12" : {
+          "amount" : -290,
+          "day" : 27,
+          "desc" : "Verizon Wireless"
+        },
+        "13" : {
+          "amount" : 3111.17,
+          "day" : 31,
+          "desc" : "Paycheck"
+        },
+        "-JaIFPXWriJ6gWO5L-Jf" : {
+          "amount" : -1150,
+          "day" : 1,
+          "desc" : "Rent"
+        },
+        "-JapGJpcsbtWSStQ7u4S" : {
+          "amount" : 200,
+          "day" : 1,
+          "desc" : "Jacob Rent"
+        },
+        "-JbF4zjc7MR_WQyhYXcB" : {
+          "amount" : -500,
+          "day" : 9,
+          "desc" : "Jeff Car"
+        },
+        "-JbF63-4jzjFO132Qcg6" : {
+          "amount" : 800,
+          "day" : 1,
+          "desc" : "Christine Pay"
+        }
+      }
+    },
+    "viewState" : {
+      "monthlyBillsOpen" : true
+    }
+  }
+}

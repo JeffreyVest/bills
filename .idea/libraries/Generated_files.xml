@@ -1,0 +1,62 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/Differ.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/global.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/lib/dreamopt.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/dreamopt_test.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/src/heap.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/SequenceMatcher.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/test/heap.test.js" />
+        <item url="file://$PROJECT_DIR$/public/app.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/optionspec_test.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/date.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/intro.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" />
+        <item url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/util/build.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/intro.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/date.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/test/heap.test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/SequenceMatcher.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/Differ.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/lib/dreamopt.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/src/heap.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/dreamopt_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/optionspec_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/util/build.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/global.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/intro.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/date.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/test/heap.test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/SequenceMatcher.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/Differ.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/lib/dreamopt.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/dreamopt_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/src/heap.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/optionspec_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/util/build.js" />
+      <root url="file://$PROJECT_DIR$/public/bower_components/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/global.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/Differ.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/global.js" />
+      <root url="file://$PROJECT_DIR$/public/services/cashFlowService.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/lib/dreamopt.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/dreamopt_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/src/heap.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/test/SequenceMatcher.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/node_modules/heap/test/heap.test.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/test/optionspec_test.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/date.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/dreamopt/examples/intro.js" />
+      <root url="file://$PROJECT_DIR$/public/app.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" />
+      <root url="file://$PROJECT_DIR$/public/bootstrap/node_modules/npm-shrinkwrap/node_modules/json-diff/node_modules/difflib/util/build.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

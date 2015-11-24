@@ -1,0 +1,30 @@
+table{
+    table-layout: fixed;
+}
+
+th, td {
+    width: 15em;
+}
+
+tr {
+    height: 1em;
+}
+
+.view-container {
+    position: relative;
+}
+
+.view-frame {
+    position: absolute;
+    opacity: 1;
+    background: white;
+}
+
+.btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default:hover {
+    background-color: transparent;
+    outline: inherit;
+}
+
+.btn.btn-default.btn-editing {
+    background-color: #f5f5f5;
+}

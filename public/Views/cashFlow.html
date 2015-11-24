@@ -1,0 +1,20 @@
+<div>
+
+    <table class="table table-hover table-bordered" style="max-width: 600px; border: 0">
+        <thead><tr>
+            <th class="well">Date</th>
+            <th class="well">Desc</th>
+            <th class="text-right well">Amount</th>
+            <th class="text-right well">Running</th>
+            <th style="border: 0; width: 0"></th>
+        </tr></thead>
+        <tbody><tr ng-repeat="bill in bills">
+            <td>{{bill.date | amDateFormat: 'l'}}</td>
+            <td>{{bill.description}}</td>
+            <td class="text-right">{{bill.amount | currency}}</td>
+            <td class="text-right">{{bill.running | currency}}</td>
+            <td style="border: 0">{{bill.min | checkmark}}</td>
+        </tr></tbody>
+    </table>
+
+</div>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+
+    <title>Cash Flow</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Scripts -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+
+    <script src="app.js"></script>
+    <script src="services/firebaseService.js"></script>
+    <script src="services/cashFlowService.js"></script>
+    <script src="controllers/mainCtrl.js"></script>
+    <script src="controllers/cashFlowCtrl.js"></script>
+    <script src="controllers/listBillsCtrl.js"></script>
+    <script src="controllers/balanceCtrl.js"></script>
+    <script src="directives/myEditButton.js"></script>
+    <script src="directives/myDeleteButton.js"></script>
+    <script src="directives/myCurrencyEditFilter.js"></script>
+
+
+</head>
+<body>
+
+<div class="container" style="margin-left: 5em">
+    <div ng-controller="MainCtrl as main" ng-cloak>
+
+        <button ng-click="main.login()" ng-show="main.needsLogin" class="btn btn-default" style="float: right;">
+            Login
+        </button>
+        <button ng-click="main.logout()" ng-show="!main.needsLogin" class="btn btn-default" style="float: right;">
+            Logout
+        </button>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li ng-class="{active: main.selectedTab === '/cashFlow'}"><a href="#/cashFlow">Cash Flow</a></li>
+            <li ng-class="{active: main.selectedTab === '/listBills'}"><a href="#/listBills">Bills</a></li>
+            <li ng-class="{active: main.selectedTab === '/balance'}"><a href="#/balance">Balance</a></li>
+        </ul>
+
+    </div>
+
+    <div class="view-container">
+        <div ng-view class="view-frame"></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
