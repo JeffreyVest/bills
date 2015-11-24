@@ -1,0 +1,72 @@
+<div>
+
+    <a href="" ng-click="viewState.monthlyBillsOpen = !viewState.monthlyBillsOpen"><h3>Monthly Bills</h3></a>
+
+    <table ng-show="viewState.monthlyBillsOpen" class="table table-hover table-bordered" style="max-width: 600px; border: 0">
+
+        <thead>
+        <tr>
+            <th class="well">Description</th>
+            <th class="text-right well">Amount</th>
+            <th class="text-right well">Day of Month</th>
+            <th style="width: 15em; border-style: none;">
+
+                <button type="button" class="btn btn-default" title="Add" ng-click="addBill(monthlyBills)" style="width: 3em">
+                    <i class="fa fa-plus"></i>
+                </button>
+                <button type="button" class="btn btn-default" title="Undo Delete" ng-click="undo(monthlyBills)" style="width: 3em">
+                    <i class="fa fa-undo"></i>
+                </button>
+
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-form="monthlyBillsForm" ng-repeat="bill in monthlyBills | orderBy:[dayOrder, '-amount']">
+
+            <td>
+                <div style="position: relative">
+
+                    <div style="position: absolute"><p class="form-control-static">{{bill.desc}}</p></div>
+                    <div style="position: absolute" class="input-group" ng-show="bill.isEditing">
+                        <input class="form-control" type="text" ng-model="bill.desc">
+                    </div>
+
+                </div>
+            </td>
+
+            <td class="text-right">
+                <div style="position: relative">
+
+                    <div style="position: absolute; right: 0"><p class="form-control-static">{{bill.amount | myCurrency}}</p></div>
+                    <div style="position: absolute" class="input-group" ng-show="bill.isEditing">
+                        <div class="input-group-addon">$</div>
+                        <input class="form-control text-right" type="number" ng-model="bill.amount">
+                    </div>
+
+                </div>
+            </td>
+
+            <td class="text-right">
+                <div style="position: relative">
+
+                    <div style="position: absolute; right: 0"><p class="form-control-static">{{bill.day}}</p></div>
+                    <div style="position: absolute" class="input-group" ng-show="bill.isEditing">
+                        <input class="form-control text-right" type="number" ng-model="bill.day">
+                    </div>
+
+                </div>
+            </td>
+
+            <td style="border-style: none; background-color: transparent;">
+                <my-edit-button form="monthlyBillsForm" collection="monthlyBills" item="bill" editor="editor"></my-edit-button>
+                <my-delete-button collection="monthlyBills" item="bill" editor="editor"></my-delete-button>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
