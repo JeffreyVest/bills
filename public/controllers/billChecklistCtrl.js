@@ -10,7 +10,7 @@
 
             bills.populateBillCheckList = function () {
                 var firebase = firebaseService.firebase;
-                firebase.child(_user.uid + '/bills').on('value', function(snapshot){
+                firebase.child(_user.uid + '/bills').once('value', function(snapshot){
                     var masterBillList = snapshot.val();
                     var cashFlow = cashFlowService.runCashFlowForDates(
                         masterBillList,
@@ -24,6 +24,10 @@
                     });
                 });
             };
+
+            bills.saveBill = function (bill) {
+                bills.billChecklist.$save(bill);
+            }
 
             bills.clearBillCheckList = function() {
                 var firebase = firebaseService.firebase;
@@ -40,11 +44,6 @@
                         _user = user;
                         var firebase = firebaseService.firebase;
                         bills.billChecklist = $firebase(firebase.child(_user.uid + '/billChecklist')).$asArray();
-                        bills.$watch('billChecklist', function (newVal, oldVal) {
-                            _.forOwn(bills.billChecklist, function (bill) {
-                                bills.billChecklist.$save(bill);
-                            })
-                        }, true);
                     }
                 }
             );

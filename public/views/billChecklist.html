@@ -16,7 +16,7 @@
             <td>{{bill.date}}</td>
             <td>{{bill.description}}</td>
             <td class="text-right">{{bill.amount | currency}}</td>
-            <td><input type="checkbox" ng-model="bill.done"></td>
+            <td><input type="checkbox" ng-model="bill.done" ng-change="saveBill(bill)"></td>
         </tr></tbody>
     </table>
 
