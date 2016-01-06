@@ -1,0 +1,23 @@
+<div style="margin-top: 1em;">
+    <button type="button" class="btn btn-default" title="Populate For This Month" ng-click="populateBillCheckList()">
+        Populate For This Month
+    </button>
+    <button type="button" class="btn btn-default" title="Clear" ng-click="clearBillCheckList()">
+        Clear
+    </button>
+
+    <table class="table table-hover table-bordered" style="max-width: 600px; border: 0; margin-top: 20px">
+        <thead><tr>
+            <th class="well">Date</th>
+            <th class="well">Desc</th>
+            <th class="text-right well">Amount</th>
+        </tr></thead>
+        <tbody><tr ng-repeat="bill in billChecklist">
+            <td>{{bill.date}}</td>
+            <td>{{bill.description}}</td>
+            <td class="text-right">{{bill.amount | currency}}</td>
+            <td><input type="checkbox" ng-model="bill.done"></td>
+        </tr></tbody>
+    </table>
+
+</div>

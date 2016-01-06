@@ -2,78 +2,72 @@
     var myApp = angular.module('myApp');
 
     myApp.factory('cashFlowService', function () {
-        return function(cashFlow, balance, asOfDate) {
-            var bills = [];
-            var startBalance = balance;
+
+        var runCashFlow = function(cashFlow, balance, asOfDate) {
             var startDate = moment(asOfDate);
             var baseDate = moment(startDate).date(1);
-            var endDate = moment(startDate).date(1).add(12, 'months');
-            bills.push({
-                description: "Balance",
-                amount: startBalance,
-                date: startDate,
-                running: 0,
-                min: false
-            });
+            var endDate = moment(baseDate).add(12, 'months');
+            return runCashFlowForDates(cashFlow, startDate, endDate, true, balance);
+        };
 
-            var m;
-            var date;
-            var monthlyBill;
-            var j;
-            _.forOwn(cashFlow.monthlyBills, function(bill) {
-                m = 0;
-                date = moment(baseDate).date(Math.min(bill.day, baseDate.daysInMonth()));
+        var runCashFlowForDates = function(masterBillList, startDate, endDate, computeRunningBalances, balance) {
+            var cashFlow = [];
+
+            var startBalance = balance;
+            var baseDate = moment(startDate).date(1);
+
+            if (computeRunningBalances) {
+                cashFlow.push({
+                    description: "Balance",
+                    amount: startBalance,
+                    date: startDate,
+                    running: 0,
+                    min: false
+                });
+            }
+
+            _.forOwn(masterBillList.monthlyBills, function(bill) {
+                var monthOffset = 0;
+                var date = moment(baseDate).date(Math.min(bill.day, baseDate.daysInMonth()));
                 while (date.isBefore(endDate)) {
-                    bills.push({
+                    cashFlow.push({
                         date: date,
                         description: bill.desc,
                         amount: bill.amount ||  0,
-                        interestRate: bill.interestRate,
                         running: 0,
                         min: false
                     });
-                    m++;
-                    date = moment(baseDate).add(m, 'months');
+                    monthOffset++;
+                    date = moment(baseDate).add(monthOffset, 'months');
                     date.date(Math.min(bill.day, date.daysInMonth()));
                 }
             });
 
-            //var weeklyBill;
-            //var w;
-            //_.forOwn(cashFlow.weeklyBills, function(bill) {
-            //    w = 0;
-            //    baseDate = moment(startDate).day(bill.dayOfWeek);
-            //    date = moment(baseDate);
-            //    while (date.isBefore(endDate)) {
-            //        bills.push({
-            //            date: date,
-            //            description: bill.desc,
-            //            amount: bill.amount,
-            //            running: 0,
-            //            min: false
-            //        });
-            //        w++;
-            //        date = moment(baseDate).add(w, 'weeks');
-            //    }
-            //});
-
-            bills = _(bills).sortBy('amount').reverse().sortBy('date').filter(function(b) {
+            cashFlow = _(cashFlow).sortBy('amount').reverse().sortBy('date').filter(function(b) {
                 return b.date >= startDate;
             }).valueOf();
 
-            var running = 0;
-            var bill;
-            for (j = 0; j < bills.length; j++) {
-                bill = bills[j];
-                bill.interestRate && (bill.amount = (bill.interestRate / 12) * running);
-                running += bill.amount;
-                bill.running = running;
+            if (computeRunningBalances) {
+                var running = 0;
+                var j;
+                for (j = 0; j < cashFlow.length; j++) {
+                    var bill = cashFlow[j];
+                    running += bill.amount;
+                    bill.running = running;
+                }
+
+                _.min(cashFlow, function (b) {
+                    return b.running;
+                }).min = true;
             }
 
-            _.min(bills, function(b) { return b.running; }).min = true;
-
-            return bills;
+            return cashFlow;
         };
+
+        return {
+            runCashFlow: runCashFlow,
+            runCashFlowForDates: runCashFlowForDates
+        }
     });
 
 })();

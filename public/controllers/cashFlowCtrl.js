@@ -31,7 +31,7 @@
 
                         var updateCashFlow = function () {
                             cashFlow =
-                                cashFlowService(
+                                cashFlowService.runCashFlow(
                                     data[user.id].bills,
                                     data[user.id].balance.balanceAmount,
                                     data[user.id].balance.asOfDate

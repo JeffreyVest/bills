@@ -23,15 +23,19 @@
         $routeProvider.
             when('/cashFlow', {
                 templateUrl: 'views/cashFlow.html',
-                controller: 'CashFlowCtrl',
+                controller: 'CashFlowCtrl'
             }).
             when('/listBills', {
                 templateUrl: 'views/listBills.html',
-                controller: 'ListBillsCtrl',
+                controller: 'ListBillsCtrl'
+            }).
+            when('/billChecklist', {
+                templateUrl: 'views/billChecklist.html',
+                controller: 'BillChecklistCtrl'
             }).
             when('/balance', {
                 templateUrl: 'views/balance.html',
-                controller: 'BalanceCtrl',
+                controller: 'BalanceCtrl'
             }).
             otherwise({
                 redirectTo: '/cashFlow'
