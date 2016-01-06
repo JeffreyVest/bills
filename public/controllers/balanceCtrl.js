@@ -19,7 +19,7 @@
 
                     if (user) {
                         var firebase = firebaseService.firebase;
-                        $firebase(firebase.child(user.id + '/balance')).$asObject().$bindTo($scope, 'balance');
+                        $firebase(firebase.child(user.uid + '/balance')).$asObject().$bindTo($scope, 'balance');
                     }
 
                 }

@@ -64,8 +64,8 @@
                     if (user) {
                         var firebase = firebaseService.firebase;
 
-                        bills.monthlyBills = $firebase(firebase.child(user.id + '/bills/monthlyBills')).$asArray();
-                        $firebase(firebase.child(user.id + '/viewState')).$asObject().$bindTo(bills, 'viewState');
+                        bills.monthlyBills = $firebase(firebase.child(user.uid + '/bills/monthlyBills')).$asArray();
+                        $firebase(firebase.child(user.uid + '/viewState')).$asObject().$bindTo(bills, 'viewState');
                     }
                 }
             );

@@ -32,14 +32,14 @@
                         var updateCashFlow = function () {
                             cashFlow =
                                 cashFlowService.runCashFlow(
-                                    data[user.id].bills,
-                                    data[user.id].balance.balanceAmount,
-                                    data[user.id].balance.asOfDate
+                                    data.bills,
+                                    data.balance.balanceAmount,
+                                    data.balance.asOfDate
                                 );
                             cf.bills = cashFlow;
                         };
 
-                        data = $firebase(firebaseService.firebase).$asObject();
+                        data = $firebase(firebaseService.firebase.child(user.uid)).$asObject();
 
                         data.$watch(updateCashFlow);
                     }
