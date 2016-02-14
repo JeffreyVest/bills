@@ -19,7 +19,8 @@
                         false);
                     _.forEach(cashFlow, function(cashFlowItem) {
                         cashFlowItem.date = cashFlowItem.date.format('l');
-                        cashFlowItem.done = false;
+                        cashFlowItem.scheduled = false;
+                        cashFlowItem.paid = false;
                         bills.billChecklist.$add(cashFlowItem);
                     });
                 });

@@ -11,12 +11,15 @@
             <th class="well">Date</th>
             <th class="well">Desc</th>
             <th class="text-right well">Amount</th>
+            <th class="well" style="width: 8em;">Scheduled</th>
+            <th class="well" style="width: 4em">Paid</th>
         </tr></thead>
         <tbody><tr ng-repeat="bill in billChecklist">
             <td>{{bill.date}}</td>
             <td>{{bill.description}}</td>
             <td class="text-right">{{bill.amount | currency}}</td>
-            <td><input type="checkbox" ng-model="bill.done" ng-change="saveBill(bill)"></td>
+            <td><input type="checkbox" ng-model="bill.scheduled" ng-change="saveBill(bill)"></td>
+            <td><input type="checkbox" ng-model="bill.paid" ng-change="saveBill(bill)"></td>
         </tr></tbody>
     </table>
 
